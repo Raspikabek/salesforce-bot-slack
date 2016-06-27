@@ -77,7 +77,7 @@ let formatCase = _case => {
 
     let fields = [];
     fields.push({title: "Asunto", value: _case.get("subject"), short: true});
-    fields.push({title: "Link", value: 'https://login.salesforce.com/' + _case.getid(), short: true});
+    fields.push({title: "Link", value: 'https://login.salesforce.com/' + _case.get('id'), short: true});
     fields.push({title: "Descripción", value: _case.get("description"), short: false});
     return [{color: color, fields: fields}];
 
