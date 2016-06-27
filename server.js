@@ -30,6 +30,12 @@ controller.hears(['ayuda', 'ayudame', 'ayudarme'], 'direct_message,direct_mentio
     });
 });
 
+controller.hears(['gracias'], 'direct_message,direct_mention,mention', (bot, message) => {
+    bot.reply(message, {
+        text: `"De nada muchacho!"`
+    });
+});
+
 
 controller.hears(['busca la cuenta (.*)', 'busca (.*) en cuentas'], 'direct_message,direct_mention,mention', (bot, message) => {
     let name = message.match[1];
