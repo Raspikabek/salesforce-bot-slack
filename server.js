@@ -32,7 +32,7 @@ controller.hears(['ayuda', 'ayudame', 'ayudarme'], 'direct_message,direct_mentio
 
 controller.hears(['gracias'], 'direct_message,direct_mention,mention', (bot, message) => {
     bot.reply(message, {
-        text: `"De nada muchacho!" - ` + Date.now();
+        text: `"De nada muchacho!"` + Date.now()
     });
 });
 
